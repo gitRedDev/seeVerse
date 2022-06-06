@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "223555126937",
+    "project_id": "seeverse-61279",
+    "storage_bucket": "seeverse-61279.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223555126937:android:e3872bd4373e3070df5a08",
+        "android_client_info": {
+          "package_name": "com.example.seeverse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223555126937-db8mm4ndicq2tbufnh6hf64j68gpqba6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvVcF_Y9tvL94F-dc3J0T1gWgAM54xwUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223555126937-db8mm4ndicq2tbufnh6hf64j68gpqba6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
