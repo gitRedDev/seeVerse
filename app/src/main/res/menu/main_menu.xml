@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/menu_icon"
+            android:icon="@drawable/ic_baseline_home_24"
             android:title="Home" />
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/menu_icon"
+            android:icon="@drawable/ic_baseline_person_24"
             android:title="Profile" />
-        <item
-            android:id="@+id/nav_dict"
-            android:icon="@drawable/menu_icon"
-            android:title="Dictionnary" />
+
         <item
             android:id="@+id/nav_sign"
-            android:icon="@drawable/menu_icon"
+            android:icon="@drawable/ic_baseline_format_shapes_24"
             android:title="Translate sign" />
-        <item
-            android:id="@+id/nav_voice"
-            android:icon="@drawable/menu_icon"
-            android:title="Translate voice" />
+
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/login_icon"
             android:title="Logout" />
 
-    </group>
+
+
+
 
     <item android:title="communicate">
 
@@ -36,11 +30,11 @@
             <item
                 android:id="@+id/nav_share"
                 android:title="Share"
-                android:icon="@drawable/menu_icon"/>
+                android:icon="@drawable/ic_baseline_share_24"/>
             <item
                 android:id="@+id/nav_rateUs"
                 android:title="Rate Us"
-                android:icon="@drawable/menu_icon"/>
+                android:icon="@drawable/ic_baseline_star_rate_24"/>
 
         </menu>
     </item>
