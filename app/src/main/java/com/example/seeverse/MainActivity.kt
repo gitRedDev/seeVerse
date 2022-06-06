@@ -1,5 +1,6 @@
 package com.example.seeverse
 
+<<<<<<< HEAD
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -94,4 +95,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+=======
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+>>>>>>> 7159e4fc9354d367205e306fbcc1345063432f1f
 }
