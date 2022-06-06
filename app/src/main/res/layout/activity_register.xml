@@ -9,7 +9,7 @@
     tools:context=".HomeActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    android:background="@drawable/Register"
+    android:background="@drawable/register"
     android:orientation="vertical">
 
 
@@ -81,7 +81,7 @@
                 android:id="@+id/button6"
                 android:layout_width="213dp"
                 android:layout_height="133dp"
-                android:background="@drawable/Register_icon"
+                android:background="@drawable/register_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="582dp" />

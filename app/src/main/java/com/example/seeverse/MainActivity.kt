@@ -1,6 +1,5 @@
 package com.example.seeverse
 
-<<<<<<< HEAD
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -48,18 +47,12 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
                     true
                 }
-                R.id.nav_dict -> {
-                    Toast.makeText(this, "Dict", Toast.LENGTH_SHORT).show()
-                    true
-                }
+
                 R.id.nav_sign -> {
                     Toast.makeText(this, "Sign to voice", Toast.LENGTH_SHORT).show()
                     true
                 }
-                R.id.nav_voice -> {
-                    Toast.makeText(this, "Voice to sign", Toast.LENGTH_SHORT).show()
-                    true
-                }
+
                 R.id.nav_share -> {
                     Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show()
                     true
@@ -94,15 +87,4 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
-
-=======
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
->>>>>>> 7159e4fc9354d367205e306fbcc1345063432f1f
 }

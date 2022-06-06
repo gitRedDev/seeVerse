@@ -9,7 +9,7 @@
     tools:context=".HomeActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    android:background="@drawable/Login"
+    android:background="@drawable/login"
     android:orientation="vertical">
 
 
@@ -24,7 +24,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -32,7 +33,7 @@
                 android:id="@+id/button2"
                 android:layout_width="213dp"
                 android:layout_height="133dp"
-                android:background="@drawable/Login_icon"
+                android:background="@drawable/login_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="535dp" />

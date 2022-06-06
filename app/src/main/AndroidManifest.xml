@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.seeverse">
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
@@ -12,9 +9,6 @@
     <uses-feature
         android:name="android.software.leanback"
         android:required="true" />
-=======
-    package="com.example.seeverse">
-
     <uses-feature android:name="android.hardware.camera.any" />
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -22,7 +16,6 @@
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
->>>>>>> 7159e4fc9354d367205e306fbcc1345063432f1f
 
     <application
         android:allowBackup="true"
@@ -32,7 +25,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SeeVerse">
         <activity
-<<<<<<< HEAD
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
@@ -43,50 +35,24 @@
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:banner="@drawable/app_icon_your_company"
-            android:exported="true"
-            android:icon="@drawable/app_icon_your_company"
-            android:label="@string/title_activity_home"
-            android:logo="@drawable/app_icon_your_company"
-            android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true" >
 
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".DetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PlaybackActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BrowseErrorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".SignToSpeechActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-=======
-            android:name=".SignToSpeechActivity"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
 
->>>>>>> 7159e4fc9354d367205e306fbcc1345063432f1f
         </activity>
     </application>
 
 </manifest>
+
