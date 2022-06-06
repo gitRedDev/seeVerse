@@ -24,9 +24,7 @@ import java.util.UUID;
 
 public class AddUserActivity extends AppCompatActivity {
 
-    EditText etFirstName,etLastName,etAge,etEmail,etLoginPass,etPhoneNumber;
-    RadioButton radioButton1,radioButton2;
-    CheckBox checkBox,checkBox2,checkBox3;
+    EditText etName,etAge,etEmail,etLoginPass;
     Button btnCreate;
 
     ProgressDialog pd;
@@ -38,18 +36,11 @@ public class AddUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_user);
 
-        etFirstName = findViewById(R.id.etFirstName);
-        etLastName = findViewById(R.id.etLastName);
+        etName = findViewById(R.id.etName);
         etAge = findViewById(R.id.etAge);
         etEmail = findViewById(R.id.etEmail);
         etLoginPass = findViewById(R.id.etLoginPass);
-        etPhoneNumber = findViewById(R.id.etPhoneNumber);
         btnCreate = findViewById(R.id.btnCreate);
-        radioButton1 = findViewById(R.id.radioButton1);
-        radioButton2 = findViewById(R.id.radioButton2);
-        checkBox = findViewById(R.id.checkBox);
-        checkBox2 = findViewById(R.id.checkBox2);
-        checkBox3 = findViewById(R.id.checkBox3);
 
         pd = new ProgressDialog(this);
         db = FirebaseFirestore.getInstance();
@@ -58,44 +49,11 @@ public class AddUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String firstName = etFirstName.getText().toString().trim();
-                String lastName = etLastName.getText().toString().trim();
+                String name = etName.getText().toString().trim();
                 int age = Integer.parseInt(etAge.getText().toString());
                 String email = etEmail.getText().toString().trim();
                 String password = etLoginPass.getText().toString().trim();
-                String phone = etPhoneNumber.getText().toString().trim();
-                Boolean student = radioButton1.isChecked();
-                Boolean professor = radioButton2.isChecked();
-                Boolean firstYear = checkBox2.isChecked();
-                Boolean secondYear = checkBox3.isChecked();
-                Boolean thirdYear = checkBox.isChecked();
-
-                String category = null;
-
-                if(!student && !professor){
-                    Toast.makeText(AddUserActivity.this,"choose a category", Toast.LENGTH_SHORT);
-                    return;
-                }else if (student){
-                    category = radioButton1.getText().toString().trim();
-                }else{
-                    category = radioButton2.getText().toString().trim();
-                }
-
-                List<String> years = new ArrayList<>();
-
-                if(firstYear){
-                    years.add(checkBox2.getText().toString().trim());
-                }
-
-                if(secondYear){
-                    years.add(checkBox3.getText().toString().trim());
-                }
-
-                if(thirdYear){
-                    years.add(checkBox.getText().toString().trim());
-                }
-
-                uploadData(firstName,lastName,age,email,password,phone,category,years);
+                uploadData(name,age,email,password);
 
 
 
@@ -103,21 +61,17 @@ public class AddUserActivity extends AppCompatActivity {
         });
     }
 
-    private void uploadData(String firstName, String lastName, int age, String email, String password, String phone,String category,List<String> years) {
+    private void uploadData(String name, int age, String email, String password) {
         pd.setTitle("adding data to firestore");
         pd.show();
         String id = UUID.randomUUID().toString();
 
         Map<String, Object> doc = new HashMap<>();
         doc.put("id",id);
-        doc.put("firstname", firstName);
-        doc.put("lastname", lastName);
+        doc.put("name", name);
         doc.put("age", age);
         doc.put("emil", email);
         doc.put("password", password);
-        doc.put("phone",phone);
-        doc.put("category",category);
-        doc.put("years",years);
 
         db.collection("users").document(id).set(doc)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {

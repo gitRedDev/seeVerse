@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
                         "User logged in successfully",
                         Toast.LENGTH_SHORT
                     ).show()
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                 } else {
                     Toast.makeText(
                         this@LoginActivity,
