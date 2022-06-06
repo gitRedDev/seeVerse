@@ -84,7 +84,8 @@ class SignToSpeechActivity : AppCompatActivity() {
                 .also {
                     it.setAnalyzer(cameraExecutor, SignAnalyzer {luma ->
                         runOnUiThread {
-                            viewBinding.detectedText.text = "%s".format(luma)}
+                            val previous = viewBinding.detectedText.text
+                            viewBinding.detectedText.text = "%s%s".format(previous,luma)}
                         }
                     )
                 }
@@ -161,7 +162,7 @@ class SignToSpeechActivity : AppCompatActivity() {
                     val bm = viewBinding.viewFinder.bitmap!!
                     val bm_32 = Bitmap.createScaledBitmap(bm, image_width, image_heigth, true)
                         .toGrayscale()
-                    viewBinding.image.setImageBitmap(bm_32)
+                    viewBinding.image?.setImageBitmap(bm_32)
                     try {
                         val model = SignToSpeech.newInstance(this@SignToSpeechActivity)
 
